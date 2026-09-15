@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumbrella 的主页</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* 页面背景 - 渐变设计 */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* 卡片容器 */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 头像占位符 */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* 标题 */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* 副标题 */
+        .subtitle {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        /* 介绍文字 */
+        .bio {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        /* 按钮 */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:hover {
+            background: #5a67d8;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 页脚 */
+        footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 头像，你可以把首字母换成你自己的 -->
+        <div class="avatar">D</div>
+        
+        <h1>你好，我是 Dumbrella</h1>
+        <p class="subtitle">欢迎来到我的个人主页</p>
+        
+        <div class="bio">
+            <p>这是一个用 GitHub Pages 搭建的静态网页。</p>
+            <p>你可以在这里展示你的个人介绍、作品集、博客文章，或者放上你的社交链接。</p>
+            <p>✨ 现在，去修改这个文件，把它变成你的专属领地吧！</p>
+        </div>
+
+        <!-- 这里的链接可以改成你的 GitHub 或社交媒体 -->
+        <a href="https://github.com/Dumbrella1026" class="btn" target="_blank">访问我的 GitHub</a>
+
+        <footer>
+            &copy; <span id="year"></span> Dumbrella. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- 一段小脚本，自动更新年份 -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
